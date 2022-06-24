@@ -1,18 +1,38 @@
-let h3Tag = document.getElementById('output');
-let stringVar = '';
 
-function moduloEx6(firstParameter, secondParameter) {
+function moduloEx6(verA, verB) {
+    
+const a = (`The number ${verA} is bigger than ${verB}`)
+const c = (`The number ${verA} is equal to ${verB}`)
+  const d = (`The number ${verA} is less than ${verB}`)
   
-  const moduloVar = firstParameter % secondParameter;
-  if (firstParameter > secondParameter && moduloVar != 0) {
-    stringVar = `The number ${firstParameter} is bigger than ${secondParameter}. But the modulo of ${firstParameter} % ${secondParameter} is ${moduloVar}`;
-  } else if (firstParameter > secondParameter) {
-    stringVar = `The number ${firstParameter} is bigger than ${secondParameter}`;
-  } else if (firstParameter === secondParameter) {
-    stringVar = `The number ${firstParameter} is equal to ${secondParameter}`;
-  } else if (firstParameter < secondParameter) {
-    stringVar = `The number ${firstParameter} is less than ${secondParameter}`;
+  //input = document.getElementById(input)
+let modulor = verA % verB;
+const module = (`But the modulo of ${verA} % ${verB} is ${modulor}`)
+  let result = "0";  
+  if (verA > verB &&  verA % verB != 0)
+  {
+    result = (`${ a }. ${ module }` );
   }
-  h3Tag.innerText = stringVar;
-} 
-moduloEx6(8, 3);
+  else if (verA > verB)
+  {
+     result = (a);
+  }
+  else if (verA === verB)
+  {
+     result = (c);
+  }
+  else if (verA < verB)
+  {
+     result = (d);
+  }
+
+  
+    document.getElementById("output").innerText = `${result}`;
+
+}
+
+
+
+moduloEx6(3, 3);
+
+//  In that file, edit the function provided. Use as template your previous function. Instead of logging a string to the console,  change the text of the tag according to the logic you implemented. This exercise does not have an automated test. Run it in your browser, and check the results.

@@ -1,24 +1,30 @@
-function moduloEx5(fnumber, snumber ) {
-  const pnumber = fnumber % snumber;
-  let stringVar;
-  if (fnumber > snumber && (pnumber != 0))
+function moduloEx5(verA, verB) {
+  
+const a = (`The number ${verA} is bigger than ${verB}`)
+const c = (`The number ${verA} is equal to ${verB}`)
+const d = (`The number ${verA} is less than ${verB}`)
+let modulor = verA % verB;
+const module = (`But the modulo of ${verA} % ${verB} is ${modulor}`)
+  let result = "0";  
+  if (verA > verB &&  verA % verB != 0)
   {
-    stringVar = (`The number ${fnumber} is bigger than ${snumber}. But the modulo of ${fnumber} % ${snumber} is ${pnumber}`)
+    result = (`${ a }. ${ module }` );
   }
-  else if (fnumber > snumber )
+  else if (verA > verB)
   {
-    stringVar =  (`The number ${fnumber} is bigger than ${snumber}`)
+     result = (a);
   }
-  else if (fnumber === snumber)
+  else if (verA === verB)
   {
-    stringVar = (`The number ${fnumber} is equal to ${snumber}`)
+     result = (c);
   }
-  else if (fnumber < snumber)
+  else if (verA < verB)
   {
-    stringVar = (`The number ${fnumber} is less than ${snumber}`)
+     result = (d);
   }
-  console.log(stringVar)
+  console.log(result);
 }
 
 // Do not remove or change this line, or the tests won't work
 export { moduloEx5 };
+

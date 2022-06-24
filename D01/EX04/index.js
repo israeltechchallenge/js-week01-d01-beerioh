@@ -1,21 +1,25 @@
-function modulo(fnumber, snumber,) {
+function modulo(verA , verB) {
 
-const pnumber = fnumber % snumber;
-  if (fnumber > snumber || (pnumber != 0))
+  let modulor = verA % verB;
+  let module = (`The modulo of ${verA} % ${verB} is ${modulor}`)
+  
+  if (verA > verB &&  verA % verB != 0)
   {
-    console.log(`The modulo of ${fnumber} % ${snumber} is ${pnumber}`)
+    console.log(`The number ${verA} is bigger than ${verB}`);
+    console.log(module)
   }
-  if (fnumber > snumber)
+  else if (verA > verB)
   {
-    console.log(`The number ${fnumber} is bigger than ${snumber}`)
+    console.log(`The number ${verA} is bigger than ${verB}`);
+   
   }
-  else if (fnumber === snumber)
+  else if (verA === verB)
   {
-    console.log(`The number ${fnumber} is equal to ${snumber}`)
+    console.log(`The number ${verA} is equal to ${verB}`);
   }
-  else if (fnumber < snumber)
+  else if (verA < verB)
   {
-    console.log(`The number ${fnumber} is less than ${snumber}`)
+    console.log(`The number ${verA} is less than ${verB}`);
   }
 }
 

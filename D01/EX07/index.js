@@ -1,30 +1,33 @@
 let randomNumber;
-function getRandomInt() {
-  randomNumber = parseInt(Math.random(randomNumber) * 100);
-  return randomNumber;
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
 }
-
-// let randomNumber1 = randomNumber;
-// let randomNumber2 = randomNumber;
-
-let h3Tag = document.getElementById('output');
-let stringVar = '';
-
-function moduloEx7(firstParameter, secondParameter) {
-  const moduloVar = firstParameter % secondParameter;
-  if (firstParameter > secondParameter && moduloVar != 0) {
-    stringVar = `The number ${firstParameter} is bigger than ${secondParameter}. But the modulo of ${firstParameter} % ${secondParameter} is ${moduloVar}`;
-  } else if (firstParameter > secondParameter) {
-    stringVar = `The number ${firstParameter} is bigger than ${secondParameter}`;
-  } else if (firstParameter === secondParameter) {
-    stringVar = `The number ${firstParameter} is equal to ${secondParameter}`;
-  } else if (firstParameter < secondParameter) {
-    stringVar = `The number ${firstParameter} is less than ${secondParameter}`;
+  const verA = getRandomInt(100);
+  const verB = getRandomInt(100)
+const a = (`The number ${verA} is bigger than ${verB}`)
+const c = (`The number ${verA} is equal to ${verB}`)
+  const d = (`The number ${verA} is less than ${verB}`)
+  
+let modulor = verA % verB;
+const module = (`But the modulo of ${verA} % ${verB} is ${modulor}`)
+  let result = "0";  
+  if (verA > verB &&  verA % verB != 0)
+  {
+    result = (`${ a }. ${ module }` );
   }
-  h3Tag.innerText = stringVar;
-} //your code
+  else if (verA > verB)
+  {
+     result = (a);
+  }
+  else if (verA === verB)
+  {
+     result = (c);
+  }
+  else if (verA < verB)
+  {
+     result = (d);
+  }
 
-// In D01/EX07, create a website that runs the JS attached file. In that file, edit the function provided. Use as template your previous function. Add a new function that randomize the values of your two variables, using Math.random(), with the range of 1 - 100. Call to that function inside the other one instead of providing two parameters. This exercise does not have an automated test. Run it in your browser, and check the results.
-
-console.log(moduloEx7(getRandomInt(), getRandomInt()));
+  
+    document.getElementById("output").innerText = `${result}`;
 
